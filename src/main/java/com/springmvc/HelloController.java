@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/")
 public class HelloController {
+
 	@RequestMapping(method = RequestMethod.GET)
-	public String printWelcome(ModelMap model) {
-		model.addAttribute("message", "Hello world!");
+	public String index(ModelMap model) {
+        System.out.println("Index action method");
+        model.addAttribute("message", "spring mvc setup!");
 		return "hello";
 	}
 }
